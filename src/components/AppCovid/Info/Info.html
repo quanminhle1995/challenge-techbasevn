@@ -1,0 +1,24 @@
+<div class="p-grid p-card table-info">
+  <div class="p-col-12 col-title">
+    <h2>{{selectCountry.country}}</h2>
+  </div>
+  <div class="p-col-12">
+    <DataTable :value="dataByCountry" v-model:selection="selectRow" :loading="loading"
+    :paginator="true" :rows="5">
+      <template #empty>
+        No cases found.
+      </template>
+      <template #loading>
+        Loading Countries data. Please wait.
+      </template>
+      <Column field="confirmed" header="Confirmed"></Column>
+      <Column field="recovered" header="Recovered"></Column>
+      <Column field="deaths" header="Deaths"></Column>
+      <Column  header="Date">
+        <template #body="slotProps">
+          {{convertDate(slotProps.data.date)}}
+        </template>
+      </Column>
+  </DataTable>
+  </div>
+</div>

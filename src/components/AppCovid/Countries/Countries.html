@@ -1,0 +1,19 @@
+<DataTable class="p-card table-countries" :value="searchCountries()" v-model:selection="selectCountry" @row-select="onRowSelect" selectionMode="single"
+:paginator="true" :rows="5" paginatorTemplate="PrevPageLink NextPageLink RowsPerPageDropdown" :loading="loading">
+  <template #header>
+    <div class="table-header">
+        <h3>List of Countries</h3>
+        <span class="p-input-icon-left">
+            <i class="pi pi-search" />
+            <InputText  placeholder="Country Search" v-model="keySearch" />
+        </span>
+    </div>
+</template>
+<template #empty>
+  No country found.
+</template>
+<template #loading>
+  Loading Countries data. Please wait.
+</template>
+  <column field="country" header="Country"></column>
+</DataTable>

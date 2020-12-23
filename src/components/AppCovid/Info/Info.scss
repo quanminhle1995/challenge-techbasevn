@@ -1,0 +1,25 @@
+.col-date {
+text-align: right;
+align-self: center;
+}
+
+.col-title {
+    text-align: center;
+}
+
+.table-info {
+    .p-datatable-header {
+      text-align: center;
+      font-weight: bold;
+    }
+    .p-datatable-wrapper {
+      table {
+        background-color: aqua;
+        thead tr th {
+        font-weight: bold;
+        }
+        tbody tr td {
+        }
+      }
+    }
+  }

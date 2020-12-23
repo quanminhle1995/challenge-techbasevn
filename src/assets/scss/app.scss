@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+body,
+html {
+  height: 100%;
+  margin: 0;
+  background-color: #f7f7f7;
+}
+#app {
+  height: 100%;
+  background-color: #f7f7f7;
+  font-family: 'Quicksand';
+  .p-component {
+    font-family: 'Quicksand';
+  }
+}
+
+.content {
+  .p-grid {
+    margin: 0px;
+  }
+  .p-input-icon-left {
+    width: 100%;
+  }
+  .p-inputtext {
+    width: 100%;
+  };
+}
