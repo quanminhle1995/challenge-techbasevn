@@ -14,7 +14,7 @@ export default class Info extends Base {
   selectDate = new Date();
   selectRow = null;
   created() {
-    DataService.getLoading.subscribe((result) => {
+    DataService.getLoading.subscribe(result => {
       this.loading = result;
     });
     watchEffect(() => {
@@ -23,4 +23,3 @@ export default class Info extends Base {
   }
 }
 </script>
-<style lang="scss" src="./Info.scss" />

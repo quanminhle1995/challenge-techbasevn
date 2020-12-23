@@ -11,19 +11,6 @@
 
 <script lang="ts">
 import { Vue } from "vue-class-component";
-export default class AppCovid extends Vue {
-  created() {
-    console.log("ok");
-  }
-}
+export default class AppCovid extends Vue {}
 </script>
-
-<style lang="scss" scope>
-.header {
-  height: 10%;
-}
-.content {
-  padding-top: 10px;
-  height: 90%;
-}
-</style>
+<style lang="scss" src="./AppCovid.scss" scope />

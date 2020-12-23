@@ -6,14 +6,14 @@ import { computed } from "vue";
 import { ActionTypes } from "@/store/action";
 import { MutationTypes } from "@/store/mutations";
 export default class Countries extends Base {
-  protected keySearch = "";
-  protected selectCountry: ICountry = {
+  public keySearch = "";
+  public selectCountry: ICountry = {
     country: "",
     iso2: "",
-    slug: "",
+    slug: ""
   };
-  protected loading = true;
-  protected searchCountries = computed(() => {
+  public loading = true;
+  public searchCountries = computed(() => {
     return () => {
       return this.store.getters.getCountries.filter((country: any) => {
         this.loading = false;
@@ -31,21 +31,3 @@ export default class Countries extends Base {
   }
 }
 </script>
-<style lang="scss">
-.table-countries {
-  .p-datatable-header {
-    text-align: center;
-    font-weight: bold;
-  }
-  .p-datatable-wrapper {
-    table {
-      thead tr th {
-        display: none;
-      }
-      tbody tr td {
-        text-align: center;
-      }
-    }
-  }
-}
-</style>

@@ -1,23 +1,18 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
-import Login from "../views/Login.vue";
 import NotFound from "../views/NotFound.vue";
 import Dasboard from "../views/Dasboard/Dasboard.vue";
 const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
-    name: "login",
-    component: Login
-  },
-  {
-    path: "/login",
-    name: "login",
-    component: Login
+    redirect: "index"
   },
   {
     path: "/index",
     name: "AppCovid",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/AppCovid.vue"),
+      import(
+        /* webpackChunkName: "AppCovid" */ "../views/AppCovid/AppCovid.vue"
+      ),
     children: [
       {
         path: "/",
@@ -32,11 +27,7 @@ const routes: Array<RouteRecordRaw> = [
     beforeEnter: (to, from, next) => {
       //Securiry
       next(true);
-    },
-  },
-  {
-    path: "/",
-    redirect: "index"
+    }
   },
   { path: "/:pathMatch(.*)*", name: "not-found", component: NotFound }
 ];

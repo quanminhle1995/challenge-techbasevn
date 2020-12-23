@@ -1,0 +1,16 @@
+.table-countries {
+    .p-datatable-header {
+        text-align: center;
+        font-weight: bold;
+    }
+    .p-datatable-wrapper {
+        table {
+            thead tr th {
+                display: none;
+            }
+            tbody tr td {
+                text-align: center;
+            }
+        }
+    }
+}
