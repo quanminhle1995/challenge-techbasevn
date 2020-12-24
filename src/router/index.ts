@@ -7,7 +7,7 @@ const routes: Array<RouteRecordRaw> = [
     redirect: "index"
   },
   {
-    path: "/index",
+    path: "/dasboard",
     name: "AppCovid",
     component: () =>
       import(
@@ -15,7 +15,7 @@ const routes: Array<RouteRecordRaw> = [
       ),
     children: [
       {
-        path: "/",
+        path: "/index",
         redirect: "dasboard"
       },
       {
